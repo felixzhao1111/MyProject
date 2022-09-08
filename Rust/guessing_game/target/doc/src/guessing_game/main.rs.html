@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src\main.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>main.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" href="../../normalize.css"><link rel="stylesheet" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" href="../../ayu.css" disabled><link rel="stylesheet" href="../../dark.css" disabled><link rel="stylesheet" href="../../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../../storage.js"></script><script defer src="../../source-script.js"></script><script defer src="../../source-files.js"></script><script defer src="../../main.js"></script><noscript><link rel="stylesheet" href="../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../favicon.svg"></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="sidebar-logo" href="../../guessing_game/index.html"><div class="logo-container"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></div></a><h2 class="location"></h2></nav><nav class="sidebar"><a class="sidebar-logo" href="../../guessing_game/index.html"><div class="logo-container"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></div></a></nav><main><div class="width-limiter"><div class="sub-container"><a class="sub-logo-container" href="../../guessing_game/index.html"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></a><nav class="sub"><form class="search-form"><div class="search-container"><span></span><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><button type="button">?</button></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../wheel.svg"></a></div></div></form></nav></div><section id="main-content" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">1</span>
+<span id="2">2</span>
+<span id="3">3</span>
+<span id="4">4</span>
+<span id="5">5</span>
+<span id="6">6</span>
+<span id="7">7</span>
+<span id="8">8</span>
+<span id="9">9</span>
+<span id="10">10</span>
+<span id="11">11</span>
+<span id="12">12</span>
+<span id="13">13</span>
+<span id="14">14</span>
+<span id="15">15</span>
+<span id="16">16</span>
+<span id="17">17</span>
+<span id="18">18</span>
+<span id="19">19</span>
+<span id="20">20</span>
+<span id="21">21</span>
+<span id="22">22</span>
+<span id="23">23</span>
+<span id="24">24</span>
+<span id="25">25</span>
+</pre><pre class="rust"><code><span class="comment">// 将 io输入/输出库引入当前作用域。io 库来自于标准库，也被称为 std
+</span><span class="kw">use </span>std::io;
+<span class="comment">// Cargo.toml文件指定的版本是一个语义化版本
+// Cargo.lock文件根据Cargo.toml生成，并且会锁定库的版本，如果要升级该版本号可以使用cargo update重新生成版本号，但是依然受限于语义化版本
+// Rng 是一个 trait
+</span><span class="kw">use </span>rand::Rng;
+<span class="kw">fn </span>main() {
+    <span class="comment">// 打印字符串的宏
+    </span><span class="macro">println!</span>(<span class="string">&quot;Guessing the number!&quot;</span>);
+    <span class="kw">let </span>secret_number = rand::thread_rng().gen_range(<span class="number">2</span>..=<span class="number">1</span>);
+    <span class="macro">println!</span>(<span class="string">&quot;Your secret_number is {}&quot;</span>, secret_number);
+    <span class="comment">// 创建一个String类型的字符串，可变的
+    </span><span class="kw">let </span><span class="kw-2">mut </span>guess = String::new();
+    <span class="comment">// 调用 io 库中的函数 stdin
+    </span>io::stdin()
+        <span class="comment">// 调用 read_line 方法从标准输入句柄获取用户输入
+        // 我们还将 &amp;mut guess 作为参数传递给 read_line() 函数，让其将用户输入储存到这个字符串中
+        </span>.read_line(<span class="kw-2">&amp;mut </span>guess)
+        <span class="comment">// read_line 会返回一个类型为 Result 的值。 Result 是一种枚举类型，通常也写作 enum。
+        // Result 的实例拥有 expect 方法。
+        // 如果 io::Result 实例的值是 Err，expect 会导致程序崩溃，并显示当做参数传递给 expect 的信息。
+        // 如果 Result 实例的值是 Ok，expect 会获取 Ok 中的值并原样返回。
+        </span>.expect(<span class="string">&quot;Failed to read line!&quot;</span>);
+    <span class="macro">println!</span>(<span class="string">&quot;Your guess is {}&quot;</span>, guess);
+}
+</code></pre></div>
+</section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="guessing_game" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.65.0-nightly (b44197abb 2022-09-05)" ></div></body></html>

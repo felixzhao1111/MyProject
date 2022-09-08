@@ -1,0 +1,11 @@
+D:\ZhaoPF\MyProject\Rust\guessing_game\target\debug\deps\getrandom-89a7e5fb2ce07bae.rmeta: C:\Users\zhaopf\.cargo\registry\src\mirrors.ustc.edu.cn-61ef6e0cd06fb9b8\getrandom-0.2.7\src\lib.rs C:\Users\zhaopf\.cargo\registry\src\mirrors.ustc.edu.cn-61ef6e0cd06fb9b8\getrandom-0.2.7\src\error.rs C:\Users\zhaopf\.cargo\registry\src\mirrors.ustc.edu.cn-61ef6e0cd06fb9b8\getrandom-0.2.7\src\util.rs C:\Users\zhaopf\.cargo\registry\src\mirrors.ustc.edu.cn-61ef6e0cd06fb9b8\getrandom-0.2.7\src\error_impls.rs C:\Users\zhaopf\.cargo\registry\src\mirrors.ustc.edu.cn-61ef6e0cd06fb9b8\getrandom-0.2.7\src\windows.rs
+
+D:\ZhaoPF\MyProject\Rust\guessing_game\target\debug\deps\libgetrandom-89a7e5fb2ce07bae.rlib: C:\Users\zhaopf\.cargo\registry\src\mirrors.ustc.edu.cn-61ef6e0cd06fb9b8\getrandom-0.2.7\src\lib.rs C:\Users\zhaopf\.cargo\registry\src\mirrors.ustc.edu.cn-61ef6e0cd06fb9b8\getrandom-0.2.7\src\error.rs C:\Users\zhaopf\.cargo\registry\src\mirrors.ustc.edu.cn-61ef6e0cd06fb9b8\getrandom-0.2.7\src\util.rs C:\Users\zhaopf\.cargo\registry\src\mirrors.ustc.edu.cn-61ef6e0cd06fb9b8\getrandom-0.2.7\src\error_impls.rs C:\Users\zhaopf\.cargo\registry\src\mirrors.ustc.edu.cn-61ef6e0cd06fb9b8\getrandom-0.2.7\src\windows.rs
+
+D:\ZhaoPF\MyProject\Rust\guessing_game\target\debug\deps\getrandom-89a7e5fb2ce07bae.d: C:\Users\zhaopf\.cargo\registry\src\mirrors.ustc.edu.cn-61ef6e0cd06fb9b8\getrandom-0.2.7\src\lib.rs C:\Users\zhaopf\.cargo\registry\src\mirrors.ustc.edu.cn-61ef6e0cd06fb9b8\getrandom-0.2.7\src\error.rs C:\Users\zhaopf\.cargo\registry\src\mirrors.ustc.edu.cn-61ef6e0cd06fb9b8\getrandom-0.2.7\src\util.rs C:\Users\zhaopf\.cargo\registry\src\mirrors.ustc.edu.cn-61ef6e0cd06fb9b8\getrandom-0.2.7\src\error_impls.rs C:\Users\zhaopf\.cargo\registry\src\mirrors.ustc.edu.cn-61ef6e0cd06fb9b8\getrandom-0.2.7\src\windows.rs
+
+C:\Users\zhaopf\.cargo\registry\src\mirrors.ustc.edu.cn-61ef6e0cd06fb9b8\getrandom-0.2.7\src\lib.rs:
+C:\Users\zhaopf\.cargo\registry\src\mirrors.ustc.edu.cn-61ef6e0cd06fb9b8\getrandom-0.2.7\src\error.rs:
+C:\Users\zhaopf\.cargo\registry\src\mirrors.ustc.edu.cn-61ef6e0cd06fb9b8\getrandom-0.2.7\src\util.rs:
+C:\Users\zhaopf\.cargo\registry\src\mirrors.ustc.edu.cn-61ef6e0cd06fb9b8\getrandom-0.2.7\src\error_impls.rs:
+C:\Users\zhaopf\.cargo\registry\src\mirrors.ustc.edu.cn-61ef6e0cd06fb9b8\getrandom-0.2.7\src\windows.rs:
