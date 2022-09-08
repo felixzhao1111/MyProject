@@ -51,6 +51,6 @@ pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
 }
 
 fn main() {
-    let a = Vec::new();
-    two_sum()
+    let mut a = Vec::new();
+    
 }
