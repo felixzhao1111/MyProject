@@ -4,7 +4,7 @@ import json
 import time
 import shutil
 ELDEN_RING_DIR = os.path.join(os.path.expanduser('~'), "AppData\Roaming\EldenRing")
-BAKUP_DIR = r"D:\ZhaoPF\EldenRingBakup"
+BAKUP_DIR = r"D:\EldenRingBakup"
 
 
 class Backup(object):
